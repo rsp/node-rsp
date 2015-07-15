@@ -1,4 +1,9 @@
 
+//String.aaaa();
+//String.aaaa();
+//String.aaaa();
+
+
 var prox = {
   get: function (target, name, receiver) {
      console.log('proxy: '+name+' for '+
@@ -31,7 +36,7 @@ function rspromise (f) {
 
 var p = rspromise(function (resolve, reject) {
   setTimeout(function () {
-    resolve([1,2,3,4]);
+    resolve(Promise.resolve([1,2,3,4]));
   }, 2000);
 });
 
@@ -54,10 +59,5 @@ p1.toUpperCasee().split(' ').then(function (val) {
 }, function (error) {
   console.log('error: '+ error);
 });
-
-
-
-
-
 
 
