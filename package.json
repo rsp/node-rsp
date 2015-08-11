@@ -1,0 +1,19 @@
+{
+  "name": "rsp",
+  "version": "0.0.1",
+  "description": "manipulating promises, early alpha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsp/node-rsp.git"
+  },
+  "author": "Rafał Pocztarski <r.pocztarski@gmail.com> (https://rsp.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsp/node-rsp/issues"
+  },
+  "homepage": "https://github.com/rsp/node-rsp#readme"
+}
