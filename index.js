@@ -1,6 +1,15 @@
 
 "use strict";
 
+try {
+  Proxy;
+} catch(e) {
+  console.error("No Proxy implementation available. Run node with --harmony-proxies");
+  process.exit(1);
+}
+
+var HProxy = require('harmony-proxy');
+
 module.exports = rsp;
 
 var prox = {
@@ -24,7 +33,7 @@ var prox = {
 };
 
 function rsp(p) {
-  return new Proxy(p, prox);
+  return new HProxy(p, prox);
 }
 
 function rspromise(f) {

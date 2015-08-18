@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rsp/node-rsp/issues"
   },
-  "homepage": "https://github.com/rsp/node-rsp#readme"
+  "homepage": "https://github.com/rsp/node-rsp#readme",
+  "dependencies": {
+    "harmony-proxy": "0.0.2"
+  }
 }
