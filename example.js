@@ -64,7 +64,7 @@ promise2.then(function (value) {
 
 // Example from README.md
 
-// You have a promise `p1` that will resolve to `"text"` after 3 seconds:
+// You have a promise `p1` that will resolve to `"text"` after 5 seconds:
 var p1 = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve("text");
@@ -89,7 +89,8 @@ var p6 = p5.map(function (a) { return '(' + a + ')'; });
 // Then you can join it with dashes:
 var p7 = p6.join('-');
 
-// And now you have a promise `p5` that will eventually resolve to '(T)-(X)-(T)' as expected:
+// And now you have a promise `p5` that will eventually resolve to '(T)-(X)-(T)'
+// but can be prepared way before the original promise `p1` is resolved.
 p7.then(function (value) {
     console.log("p7 value is: " + value);
 });

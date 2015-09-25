@@ -7,6 +7,8 @@ A proof-of-concept module that allows you to call methods on promises in the fut
 promise2 = promise1.toUpperCase().split('').join('-');
 ```
 
+This is work in progress - more features to come.
+
 How it works
 ------------
 If you have a promise `p` that will eventually resolve to some value then you can create another promise by calling `rsp(p)` that will also eventually resolve to the same value but you can call methods on it in the future that will give you promises of return values of those method calls on the future resolved value as soon as it is available.
@@ -15,7 +17,7 @@ It is easier to explain on an example:
 
 ```js
 
-// You have a promise `p1` that will resolve to `"text"` after 3 seconds:
+// You have a promise `p1` that will resolve to `"text"` after 5 seconds:
 var p1 = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve("text");
@@ -40,7 +42,8 @@ var p6 = p5.map(function (a) { return '(' + a + ')'; });
 // Then you can join it with dashes:
 var p7 = p6.join('-');
 
-// And now you have a promise `p5` that will eventually resolve to '(T)-(X)-(T)' as expected:
+// And now you have a promise `p5` that will eventually resolve to '(T)-(X)-(T)'
+// but can be prepared way before the original promise `p1` is resolved.
 p7.then(function (value) {
     console.log("p7 value is: " + value);
 });
@@ -74,6 +77,11 @@ to be able to run it as:
 ```sh
 ./your-script.js
 ```
+
+Issues
+------
+For any bug reports or feature requests please
+[post an issue on GitHub](https://github.com/rsp/node-rsp/issues).
 
 Author
 ------
