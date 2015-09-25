@@ -5,10 +5,11 @@ try {
   Proxy;
 } catch(e) {
   console.error("No Proxy implementation available. Run node with --harmony-proxies");
+  console.error("The harmony-proxy npm module is needed for node with old Proxy API.");
   process.exit(1);
 }
 
-var HProxy = require('harmony-proxy');
+var HProxy = typeof Proxy == 'function' ? Proxy : require('harmony-proxy');
 
 module.exports = rsp;
 
@@ -40,32 +41,3 @@ function rspromise(f) {
   var p = new Promise(f);
   return rsp(p);
 }
-
-/*
-var p = rspromise(function (resolve, reject) {
-  setTimeout(function () {
-    resolve(Promise.resolve([1,2,3,4]));
-  }, 2000);
-});
-
-var p1 = rspromise(function (resolve, reject) {
-  setTimeout(function () {
-    resolve('this is some text');
-  }, 2000);
-});
-
-var s = p.map(function (i) { return i+1; });
-
-s.then(function (val) {
-  console.log(val);
-}, function (error) {
-  console.log('error: '+ error);
-});
-
-p1.toUpperCasee().split(' ').then(function (val) {
-  console.log(val);
-}, function (error) {
-  console.log('error: '+ error);
-});
-*/
-

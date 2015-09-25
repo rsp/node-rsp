@@ -28,3 +28,9 @@ s.then(function (val) {
   console.log('error: '+ error);
 });
 
+p1.toUpperCase().split(' ').then(function (val) {
+  console.log(val);
+}, function (error) {
+  console.log('error: '+ error);
+});
+
