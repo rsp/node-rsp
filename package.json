@@ -1,7 +1,7 @@
 {
   "name": "rsp",
-  "version": "0.0.3",
-  "description": "manipulating promises, early alpha",
+  "version": "0.0.4",
+  "description": "Radically Simplifed Promises - call methods on values in the future",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/rsp/node-rsp.git"
   },
+  "keywords": [
+    "promise", "promises", "future", "futures", "es6", "harmony",
+    "harmony-proxy", "harmony-proxies", "proxy", "proxies"
+  ],
   "author": "Rafał Pocztarski <r.pocztarski@gmail.com> (https://rsp.github.io/)",
   "license": "MIT",
   "bugs": {
