@@ -2,10 +2,25 @@ node rsp
 ========
 Radically Simplifed Promises.
 
-A proof-of-concept module that allows you to call methods on promises in the future and get expected results:
+A proof-of-concept module that allows you to call methods on promises in the future:
 ```js
-promise2 = promise1.toUpperCase().split('').join('-');
+var promise2 = promise1.toUpperCase();
+var promise3 = promise2.split('').join('-');
 ```
+Instead of:
+```js
+promise2 = new Promise(function (resolve, reject) {
+  promise1.then(function (value) {
+    resolve(value.toUpperCase());
+  });
+});
+promise3 = new Promise(function (resolve, reject) {
+  promise2.then(function (value) {
+    resolve(value.split('').join('-'));
+  });
+});
+```
+
 
 This is work in progress - more features to come.
 

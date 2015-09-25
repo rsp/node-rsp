@@ -56,10 +56,27 @@ var promise1 = rsp(function (resolve, reject) {
     resolve("text");
   }, 4000);
 });
-promise2 = promise1.toUpperCase().split('').join('-');
-promise2.then(function (value) {
-    console.log('promise2 is: ' + value);
+var promise2 = promise1.toUpperCase();
+var promise3 = promise2.split('').join('-');
+promise3.then(function (value) {
+    console.log('promise3 is:  ' + value);
 });
+
+promise2a = new Promise(function (resolve, reject) {
+  promise1.then(function (value) {
+    resolve(value.toUpperCase());
+  });
+});
+promise3a = new Promise(function (resolve, reject) {
+  promise2a.then(function (value) {
+    resolve(value.split('').join('-'));
+  });
+});
+
+promise3a.then(function (value) {
+    console.log('promise3a is: ' + value);
+});
+
 
 
 // Example from README.md

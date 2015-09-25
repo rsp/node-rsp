@@ -1,6 +1,6 @@
 {
   "name": "rsp",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Radically Simplifed Promises - call methods on values in the future",
   "main": "index.js",
   "scripts": {
