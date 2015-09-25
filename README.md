@@ -67,6 +67,21 @@ p7.then(function (value) {
 
 See: [example.js](example.js) for more examples.
 
+Installation
+------------
+Install to use in your project, updating the dependencies in package.json:
+```sh
+npm install rsp --save
+```
+It currently has one dependency:
+[harmony-proxy](https://www.npmjs.com/package/harmony-proxy)
+to translate [the old Proxy API](https://developer.mozilla.org/en-US/docs/Archive/Web/Old_Proxy_API)
+(that both Node.js as of 4.0.0 and io.js as of v2.3.4 currently use)
+to the [new API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+defined in the ECMAScript 2015 (ES6) standard.
+Additionally both Node.js and io.js need to be run with `--harmony-proxies` for proxies to
+be available at all. Using `--harmony` is not enough.
+
 Usage
 -----
 ```js
