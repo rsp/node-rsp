@@ -57,8 +57,9 @@ var p6 = p5.map(function (a) { return '(' + a + ')'; });
 // Then you can join it with dashes:
 var p7 = p6.join('-');
 
-// And now you have a promise `p5` that will eventually resolve to '(T)-(X)-(T)'
-// but can be prepared way before the original promise `p1` is resolved.
+// And now you have a promise `p5` that will eventually resolve
+// to '(T)-(X)-(T)' after 5 seconds but can be prepared way before
+// the original promise `p1` itself is resolved.
 p7.then(function (value) {
     console.log("p7 value is: " + value);
 });
