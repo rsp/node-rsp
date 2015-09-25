@@ -1,6 +1,6 @@
 {
   "name": "rsp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "manipulating promises, early alpha",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/rsp/node-rsp#readme",
   "dependencies": {
-    "harmony-proxy": "0.0.3"
+    "harmony-proxy": "0.0.2"
   }
 }
