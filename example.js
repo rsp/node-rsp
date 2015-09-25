@@ -3,18 +3,13 @@
 
 var rsp = require('./index.js');
 
-function rspromise (f) {
-  var p = new Promise(f);
-  return rsp(p);
-}
-
-var p = rspromise(function (resolve, reject) {
+var p = rsp(function (resolve, reject) {
   setTimeout(function () {
     resolve(Promise.resolve([1,2,3,4]));
-  }, 2000);
+  }, 1000);
 });
 
-var p1 = rspromise(function (resolve, reject) {
+var p1 = rsp(function (resolve, reject) {
   setTimeout(function () {
     resolve('this is some text');
   }, 2000);

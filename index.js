@@ -34,10 +34,15 @@ var prox = {
 };
 
 function rsp(p) {
-  return new HProxy(p, prox);
+  if (typeof p.then == 'function') {
+    return new HProxy(p, prox);
+  } else {
+    return rspromise(p);
+  }
 }
 
 function rspromise(f) {
   var p = new Promise(f);
   return rsp(p);
 }
+

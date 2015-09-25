@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/rsp/node-rsp#readme",
   "dependencies": {
-    "harmony-proxy": "0.0.2"
+    "harmony-proxy": "0.0.3"
   }
 }
