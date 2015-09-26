@@ -101,7 +101,6 @@ Or you can start your script with:
 #!/bin/sh
 ":" //#; exec /usr/bin/env node --harmony-proxies "$0" "$@"
 
-
 /* ... your JavaScript code ... */
 ```
 to be able to run it as:
