@@ -9,6 +9,10 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 var rsp = (function () {
 
+"use strict";
+
+var HProxy = Proxy;
+
 var prox = {
   get: function (target, name, receiver) {
      // console.log('proxy: '+name+' for '+target);
