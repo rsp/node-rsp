@@ -34,7 +34,7 @@ var prox = {
 };
 
 function rsp(p) {
-  if (typeof p.then == 'function') {
+  if (typeof p.then === 'function') {
     return new HProxy(p, prox);
   } else {
     return rspromise(p);

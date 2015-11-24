@@ -11,8 +11,16 @@
     "url": "git+https://github.com/rsp/node-rsp.git"
   },
   "keywords": [
-    "promise", "promises", "future", "futures", "es6", "harmony",
-    "harmony-proxy", "harmony-proxies", "proxy", "proxies"
+    "promise",
+    "promises",
+    "future",
+    "futures",
+    "es6",
+    "harmony",
+    "harmony-proxy",
+    "harmony-proxies",
+    "proxy",
+    "proxies"
   ],
   "author": "Rafał Pocztarski <r.pocztarski@gmail.com> (https://rsp.github.io/)",
   "license": "MIT",
@@ -22,5 +30,6 @@
   "homepage": "https://github.com/rsp/node-rsp#readme",
   "dependencies": {
     "harmony-proxy": "0.0.2"
-  }
+  },
+  "devDependencies": {}
 }

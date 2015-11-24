@@ -21,8 +21,12 @@ promise3 = new Promise(function (resolve, reject) {
 });
 ```
 
-
 This is work in progress - more features to come.
+
+I'll try to avoid any breaking changes to the API but while it is still 0.0.x
+the API may change, once it hits 1.0 then the usual semver rules will apply.
+
+Certainly don't use any undocumented features because those are very likely to change any time.
 
 How it works
 ------------
@@ -78,7 +82,8 @@ It currently has one dependency:
 to translate [the old Proxy API](https://developer.mozilla.org/en-US/docs/Archive/Web/Old_Proxy_API)
 (that both Node.js as of 4.0.0 and io.js as of v2.3.4 currently use)
 to the [new API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
-defined in the ECMAScript 2015 (ES6) standard.
+defined in the ECMAScript 2015 (ES6) standard. (Future versions of the rsp module should drop this dependency and use the available API directly.)
+
 Additionally both Node.js and io.js need to be run with `--harmony-proxies` for proxies to
 be available at all. Using `--harmony` is not enough.
 
