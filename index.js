@@ -46,3 +46,10 @@ function rspromise(f) {
   return rsp(p);
 }
 
+function noSemicolon() {
+  var x = 1
+  var y = 2
+  var z = 3
+  if (x == y) return false
+}
+
