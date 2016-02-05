@@ -9,7 +9,7 @@ try {
   process.exit(1);
 }
 
-var HProxy = typeof Proxy == 'function' ? Proxy : require('harmony-proxy');
+var HProxy = typeof Proxy === 'function' ? Proxy : require('harmony-proxy');
 
 module.exports = rsp;
 
