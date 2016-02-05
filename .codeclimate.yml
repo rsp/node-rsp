@@ -4,6 +4,4 @@ engines:
     
 ratings:
    paths:
-   - index.js
-   - rsp.js
-   - example.js
+   - *.js
