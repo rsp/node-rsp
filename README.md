@@ -2,6 +2,8 @@ node rsp
 ========
 Radically Simplifed Promises.
 
+[![Known Vulnerabilities](https://snyk.io/test/github/rsp/node-rsp/d9e2b6eadf7048bce49e1f791fe7418ed56bfc11/badge.svg)](https://snyk.io/test/github/rsp/node-rsp/d9e2b6eadf7048bce49e1f791fe7418ed56bfc11)
+
 A proof-of-concept module that allows you to call methods on promises in the future:
 ```js
 var promise2 = promise1.toUpperCase();
